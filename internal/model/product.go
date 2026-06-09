@@ -1,13 +1,17 @@
-package domain
+package model
 
-import "time"
+import (
+	"time"
+
+	"github.com/google/uuid"
+)
 
 type Product struct {
-	Id          string    `json:"id"`
+	Id          uuid.UUID `json:"id"`
 	Name        string    `json:"name"`
 	Description string    `json:"description"`
-	Price       float32   `json:"price"`
-	Quantity    int64     `json:"quantity"`
-	Created_at  time.Time `json:"created_at"`
-	Updated_at  time.Time `json:"updated_at"`
+	Price       float64   `json:"price"`
+	Quantity    int       `json:"quantity"`
+	CreatedAt   time.Time `json:"created_at"`
+	UpdatedAt   time.Time `json:"updated_at"`
 }
